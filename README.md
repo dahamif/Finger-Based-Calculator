@@ -2,14 +2,14 @@
 
 ## 📌 Project Description
 
-This is a touchless, interactive calculator built using **Python**, **OpenCV**, and a **Raspberry Pi**. It uses a webcam to recognize **finger counting gestures** in real time to perform basic arithmetic operations. All inputs—both numbers and operators—are entered **solely through finger counting**, making it completely hands-free and intuitive.
+This is a touchless, interactive calculator built using **Python**, **OpenCV**, **MediaPipe**, and a **Raspberry Pi**. It uses a webcam to recognize **finger counting gestures** in real time to perform basic arithmetic operations. All inputs—both numbers and operators—are entered **solely through finger counting**, making it completely hands-free and intuitive.
 
-Numbers are recognized by detecting the **total number of fingers lifted across both hands**, and operations are mapped to **predefined finger-count gestures**.
+The project uses **MediaPipe's real-time hand tracking solution** to detect hand landmarks and count fingers accurately. Numbers are recognized by detecting the **total number of fingers lifted across both hands**, and operations are mapped to **predefined finger-count gestures**.
 
 Inspired by the way children engage with learning content like **Miss Rachel**, this project is designed to make math practice fun, visual, and physically engaging. 
 
 
-📽️ **[Watch Demo Video](https://www.youtube.com/watch?v=your-demo-video-link)**
+📽️ **[Watch Demo Video](https://drive.google.com/file/d/178CVBzBMGe8PC25os6muF-VEIGARWwdc/view?usp=sharing)**
 
 ---
 
@@ -38,12 +38,12 @@ The calculator uses a timer-based gesture input system to ensure accurate recogn
 
 ## ➗ Supported Math Operations
 
-| Gesture           | Operation           |
-|-------------------|---------------------|
-| ☝️ 1 finger       | Addition (+)        |
-| ✌️ 2 fingers      | Subtraction (−)     |
-| 🤟 3 fingers      | Multiplication (×)  |
-| ✋ 4 fingers      | Division (÷)        |
+ ✋ Fingers Detected        | 🔣 Mapped Operation   |
+|---------------------------|----------------------  |
+| ✊ 0 fingers (closed fist) | ➕ Addition (+)      |
+| 👎 1 finger (thumbs down) | ➖ Subtraction (−)    |
+| ✌️ 2 fingers (peace sign) | ✖️ Multiplication (*) |
+| 🖐️ 5 fingers (open palm)  | ➗ Division (/)       |
 
 - **Numbers 0–10** are input using total finger count across both hands.
 - **All input is based solely on visual finger counting.**
@@ -52,9 +52,10 @@ The calculator uses a timer-based gesture input system to ensure accurate recogn
 
 ## 🛠️ Technologies Used
 
-- Raspberry Pi (tested on Pi 4 with USB webcam)
+- Raspberry Pi (tested on Pi 3/4 with USB webcam)
 - Python 3
-- OpenCV 
+- OpenCV (`opencv-python`)
+- MediaPipe (`mediapipe`)
 - NumPy
 
 ---
